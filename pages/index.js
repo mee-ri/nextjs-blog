@@ -1,11 +1,19 @@
 import Head from "next/head";
+// Tuodaan Layout-elementti ja siteTitle-muuttuja käyttöön
 import Layout, { siteTitle } from "../components/layout";
+// Tuodaan tekstien tyylittely käyttöön
 import utilStyles from "../styles/utils.module.css";
 import { getSortedPostsData } from "../lib/posts";
+//<Link>-komponentti mahdollistaa client-puolen navigoinnin sovelluksen sisällä
+//(eli siirtymisen nopeammin JavaScriptin avulla vs selaimen oletusnavigointi full refreshillä)
+// ja mahdollistaa propsien käytön
 import Link from "next/link";
+//Tuodaan päivämäärä
 import Date from "../components/date";
 
+// getStaticProps-funktion avulla sivu pystytään pre-renderöimään propseilla, jotka palautetaan funktiossa
 export async function getStaticProps() {
+  // Palautetaan allPostsDatan avulla blogipostausten sisältö propsina
   const allPostsData = getSortedPostsData();
   return {
     props: {
@@ -14,6 +22,7 @@ export async function getStaticProps() {
   };
 }
 
+// Otetaan allPostsData-propsin avulla blogipostausten sisältö Home-komponentin käyttöön
 export default function Home({ allPostsData }) {
   return (
     <Layout home>

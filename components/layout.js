@@ -1,7 +1,16 @@
+// <Head> on React-komponentti, jonka avulla voi muuttaa sivuston <head>iä
 import Head from "next/head";
+// Image-komponentin kuvat oletusarvoisesti "lazy loaded"
+//-> kuvat latautuu, kun ne vieritetään näkymäikkunaan
+// (sivun nopeuteen ei vaikuta ei - näkyvissä olevien kuvien koko)
 import Image from "next/image";
+// Tuodaan CSS Module tyylittely käyttöön
 import styles from "./layout.module.css";
+// Tuodaan tekstien tyylittely käyttöön
 import utilStyles from "../styles/utils.module.css";
+//<Link>-komponentti mahdollistaa client-puolen navigoinnin sovelluksen sisällä
+//(eli siirtymisen nopeammin JavaScriptin avulla vs selaimen oletusnavigointi full refreshillä)
+// ja mahdollistaa propsien käytön
 import Link from "next/link";
 
 const name = "Meeri";
