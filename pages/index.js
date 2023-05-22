@@ -1,3 +1,4 @@
+// Tuodaan Head-komponentti elementtien liitämiseksi sivun headiin
 import Head from "next/head";
 // Tuodaan Layout-elementti ja siteTitle-muuttuja käyttöön
 import Layout, { siteTitle } from "../components/layout";
