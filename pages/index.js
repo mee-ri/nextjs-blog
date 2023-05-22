@@ -23,6 +23,7 @@ export async function getStaticProps() {
 }
 
 // Otetaan allPostsData-propsin avulla blogipostausten sisältö Home-komponentin käyttöön
+// Luodaan aloitussivun sisältö
 export default function Home({ allPostsData }) {
   return (
     <Layout home>

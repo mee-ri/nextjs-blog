@@ -24,6 +24,7 @@ export async function getStaticProps({ params }) {
   };
 }
 
+// Luodaan ja palautetaan blogipostaus sivun sisältö
 export default function Post({ postData }) {
   return (
     <Layout>
